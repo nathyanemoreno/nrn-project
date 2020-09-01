@@ -36,7 +36,7 @@ const useStyles = makeStyles({
 	}
 });
 
-const api = axios.create()
+// const api = axios.create()
 
 function Lists() {
 	const classes = useStyles();
@@ -57,7 +57,7 @@ function Lists() {
 	}
 
 	async function getRows(start, end) {
-		await api.get(`https://nrn-backend.herokuapp.com/listar?f=None&start=${start}&end=${end}`, {
+		await axios.get(`https://nrn-backend.herokuapp.com/listar?f=None&start=${start}&end=${end}`, {
 			headers: {
 				'Content-Type': 'application/json;charset=utf-8',
 				'Access-Control-Allow-Origin': '*',
