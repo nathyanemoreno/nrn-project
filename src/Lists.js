@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 // import Papa, { readString, read } from 'papaparse';
 import { makeStyles } from "@material-ui/core/styles";
 import { List, ListItem, Container, Button } from "@material-ui/core";
-import api from "./api";
+// import api from "./api";
+import axios from 'axios'
 
 const useStyles = makeStyles({
 	root:{
@@ -54,7 +55,7 @@ function Lists() {
 	}
 
 	async function getRows(start, end) {
-		await api.get(`/listar?f=None&start=${start}&end=${end}`)
+		await axios.get(`https://nrn-backend.herokuapp.com/listar?f=None&start=${start}&end=${end}`)
 			.then(res =>  res.data.forEach(row => setRows(rows => [...rows, row])));
 	}
 
