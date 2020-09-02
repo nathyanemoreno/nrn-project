@@ -28,7 +28,7 @@ const useStyles = makeStyles({
         elementType: 'div',
         // background: '#515151',
         padding: '0px 16px 0px 16px',
-        margin: '24px',
+        margin: '16px 0 16px 0',
         border: '1px',
         borderRadius: '8px'
     },
@@ -41,7 +41,7 @@ const useStyles = makeStyles({
         color: '#fff',
     },
     container: {
-        maxWidth: '2000px',
+        // maxWidth: '2000px',
         // background: '#1e1e1e',
         // padding : '1em',
         display: 'flex',
@@ -55,7 +55,8 @@ const useStyles = makeStyles({
         display: 'flex',
         padding: '16px 8px 16px 8px',
         margin: '4px',
-        width: '500px',
+        minWidth: '341px',
+        maxWidth:'500px'
     },
     li: {
         border: 0,

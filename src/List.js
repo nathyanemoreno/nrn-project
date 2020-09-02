@@ -88,7 +88,7 @@ function List() {
             </AppBar>
             <Collapse in={openResults}>
                 <Paper className={classes.results}>
-                    Mostrando {rows.length} de {results} linhas encontradas
+                    Mostrando {rows.length} de {results} linhas
                    <IconButton onClick={() => setOpenResults(false)}><Clear /></IconButton>
                 </Paper>
             </Collapse>
