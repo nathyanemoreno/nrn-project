@@ -15,6 +15,7 @@ function List() {
     const [query, setQuery] = useState("[]")
     const [isFilter, setIsFilter] = useState(false);
     const [openResults, setOpenResults] = useState(false)
+    const [openShowMore, setOpenShowMore] = useState(false)
 
     function handleChangeInput(e) {
         (e.match(/^\D/)) ? setFilter(e.slice(0, -1)) : setFilter(e);
@@ -51,13 +52,14 @@ function List() {
         if (isFilter) {
             arr.splice(0, arr.length);
             arr.push(...req.data.lists);
+            setResults(req.data.total)
             setIsFilter(!isFilter);
+            setOpenResults(true);
         } else {
             arr.push(...req.data.lists)
         }
-        setResults(req.data.total)
         setRows(arr);
-        setOpenResults(true);
+        setOpenShowMore(true)
     }
 
 
@@ -70,7 +72,7 @@ function List() {
             <AppBar className={classes.appbar}>
                 <Container>
                     <OutlinedInput className={classes.search}
-                        onKeyPress={(e) => (e.key === 'Enter' ) ? handleClickFilter() : {}}
+                        onKeyPress={(e) => (e.key === 'Enter') ? handleClickFilter() : {}}
                         placeholder="Insira até 15 valores entre 1 e 25 com espaço"
                         variant='outlined'
                         fullWidth
@@ -86,7 +88,7 @@ function List() {
                 </Container>
             </AppBar>
 
-            <Collapse style={{margin:'32px'}} in={openResults}>
+            <Collapse style={{ margin: '32px' }} in={openResults}>
                 <Paper className={classes.results}>
                     Mostrando {rows.length} de {results} linhas
                    <IconButton onClick={() => setOpenResults(false)}><Clear /></IconButton>
@@ -95,7 +97,7 @@ function List() {
 
             <Items rows={rows}></Items>
 
-            <Collapse style={{margin:'32px'}} in={openResults} >
+            <Collapse style={{ margin: '32px' }} in={openShowMore} >
                 <Button variant='contained' className={classes.button} onClick={handleClickMore}>
                     Mostre mais!
                 </Button>
