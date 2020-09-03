@@ -18,7 +18,7 @@ const useStyles = makeStyles({
     results: {
         background:'#5FFF87',
         padding:'0 16px 0 16px',
-        margin:'16px'
+        margin:'8px'
     },
     search: {
         display: 'flex',
@@ -53,9 +53,9 @@ const useStyles = makeStyles({
         borderRadius: '8px',
         background: '#252931',
         display: 'flex',
-        padding: '8px 4px 8px 4px',
-        margin: '4px 0 4px 0',
-        minWidth: '341px',
+        padding: '16px 8px 16px 8px',
+        margin: ' 8px 32px 8px 32px',
+        // minWidth: '341px',
         // maxWidth:'500px'
     },
     li: {
@@ -65,7 +65,7 @@ const useStyles = makeStyles({
         color: '#fff',
         padding: '2px',
         margin: '0 1px 0 1px',
-        justifyContent: 'center'
+        justifyContent: 'center',
 
     },
     button: {

@@ -1,16 +1,16 @@
 
 import React from "react";
-import { List, ListItem, Container, Typography } from "@material-ui/core";
+import { Grid, ListItem, Typography } from "@material-ui/core";
 import useStyles from "./classes";
 
 function Items({ rows }) {
     const classes = useStyles();
     return (
-        <Container className={classes.container}>
+        <Grid container spacing={4} className={classes.container}>
             {rows.map((row, line) => (
-                <List className={classes.ul} key={line.toString()} component='div'>
+                <Grid item  xs={12} md={3} className={classes.ul} key={line.toString()} component='div'>
                     {row.map((number, column) => (
-                        <ListItem
+                        <ListItem item
                             key={column.toString()}
                             className={classes.li}
                         // button={true}						
@@ -18,9 +18,9 @@ function Items({ rows }) {
                             <Typography variant="body1">{number}</Typography>
                         </ListItem>
                     ))}
-                </List>
+                </Grid>
             ))}
-        </Container>
+         </Grid>
     )
 }
 

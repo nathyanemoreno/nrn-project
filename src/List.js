@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Collapse, Button, IconButton, Paper, Container, InputAdornment, OutlinedInput, AppBar } from "@material-ui/core";
+import { Collapse, Button, IconButton, Paper, Container, InputAdornment, OutlinedInput, AppBar, Grid } from "@material-ui/core";
 import { Search, Clear } from "@material-ui/icons"
 import axios from 'axios'
 import useStyles from './classes'
@@ -67,7 +67,7 @@ function List() {
     }, [query, results]);
 
     return (
-        <div className={classes.grid}>
+        <Grid className={classes.grid}>
             <AppBar className={classes.appbar}>
                 <Container>
                     <OutlinedInput className={classes.search}
@@ -86,19 +86,22 @@ function List() {
                     </OutlinedInput>
                 </Container>
             </AppBar>
-            <Collapse in={openResults}>
+
+            <Collapse style={{margin:'32px'}} in={openResults}>
                 <Paper className={classes.results}>
                     Mostrando {rows.length} de {results} linhas
                    <IconButton onClick={() => setOpenResults(false)}><Clear /></IconButton>
                 </Paper>
             </Collapse>
+
             <Items rows={rows}></Items>
-            <Collapse in={openResults} >
+
+            <Collapse style={{margin:'32px'}} in={openResults} >
                 <Button variant='contained' className={classes.button} onClick={handleClickMore}>
                     Mostre mais!
                 </Button>
             </Collapse>
-        </div >
+        </Grid >
     );
 }
 
