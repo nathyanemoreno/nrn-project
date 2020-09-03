@@ -45,8 +45,8 @@ const useStyles = makeStyles({
         // background: '#1e1e1e',
         // padding : '1em',
         display: 'flex',
-        flexWrap: 'wrap',
-        flexDirection: 'row',
+        // flexWrap: 'wrap',
+        // flexDirection: 'row',
         justifyContent: 'space-evenly',
     },
     ul: {
@@ -54,7 +54,9 @@ const useStyles = makeStyles({
         background: '#252931',
         display: 'flex',
         padding: '16px 8px 16px 8px',
-        margin: ' 8px 32px 8px 32px',
+        // margin: ' 8px 16px 8px 16px',
+        margin:'8px',
+        justifyContent: 'space-evenly',
         // minWidth: '341px',
         // maxWidth:'500px'
     },
@@ -65,7 +67,7 @@ const useStyles = makeStyles({
         color: '#fff',
         padding: '2px',
         margin: '0 1px 0 1px',
-        justifyContent: 'center',
+        // justifyContent: 'center',
 
     },
     button: {
