@@ -53,14 +53,14 @@ const useStyles = makeStyles({
         borderRadius: '8px',
         background: '#252931',
         display: 'flex',
-        padding: '16px 8px 16px 8px',
-        margin: '4px',
+        padding: '8px 4px 8px 4px',
+        margin: '4px 0 4px 0',
         minWidth: '341px',
-        maxWidth:'500px'
+        // maxWidth:'500px'
     },
     li: {
-        border: 0,
-        borderRadius: '64px',
+        // border: 0,
+        // borderRadius: '64px',
         // background: '#272c34',
         color: '#fff',
         padding: '2px',
