@@ -62,9 +62,7 @@ function List() {
 
     useEffect(() => {
         loadRows(query, 0, 21)
-        console.log(results);
-
-    }, [query, results]);
+    }, [query]);
 
     return (
         <Grid className={classes.grid}>

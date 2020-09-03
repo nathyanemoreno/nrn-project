@@ -56,6 +56,7 @@ const useStyles = makeStyles({
         padding: '16px 8px 16px 8px',
         // margin: ' 8px 16px 8px 16px',
         margin:'8px',
+        flexDirection:'row',
         justifyContent: 'space-evenly',
         // minWidth: '341px',
         // maxWidth:'500px'
