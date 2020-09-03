@@ -51,6 +51,7 @@ function List() {
         if (isFilter) {
             arr.splice(0, arr.length);
             arr.push(...req.data.lists);
+            setIsFilter(!isFilter);
         } else {
             arr.push(...req.data.lists)
         }
